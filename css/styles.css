@@ -212,6 +212,16 @@ table{
     text-align: left;
     border-collapse: collapse;
 }
+.form{
+    height 100px;
+    overflow: scroll;
+}
+
+form{
+ width: 100%;
+ text-align: center;
+ border-collapse: collapse;
+}
 
 tr{
     border-bottom: 5px solid #f1f1f1;
