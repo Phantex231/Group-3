@@ -85,6 +85,10 @@ body{
 .picon1{
     
 }
+.picon add{
+    display: none;
+    
+}
 
 .add{
     color: white;
