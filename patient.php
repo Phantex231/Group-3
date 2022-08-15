@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
- <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  <title>Patients Form</title>
+    <title>Dashboard</title>
 </head>
 
 
@@ -15,7 +15,8 @@
 <body>
   <section class="header">
     <div class="logo"></div>
-        
+        <img src="images/hospital logo.jpg"height="60" alt=""><span><img src="images/NSW Health logo.jpg"height="65" alt=""></span>
+    </div>
       <div class="search--notification--profile">
         <div class="search">
           <input type="text" placeholder="Search">
@@ -43,7 +44,7 @@
               </a>
             </li>
             <li>
-            <a href="patient.phpp">
+            <a href="patient.php">
               <span class="icon icon-2"><i class="ri-team-fill"></i></span>
               <span class="sidebar--item">Patients</span>
             </a>
@@ -86,44 +87,35 @@
               </li>
               
             </div>
-
- <form action="insert.php"method="post" >
-  
-   <tr>
-    <td>First Name :</td>
-    <td><input type="text" name="firstName"></td>
-   </tr>
-
-   <tr>
-    <td>Last name :</td>
-    <td><input type="text"name="lastName"></td>
-   </tr>
-
-   
-   
-   <div><td>Age :</td>
-    <td><input type="number"name="age"></td>
-    <tr>
-      <td>Gender :</td>
-      <td>
-       <input type="radio" name="gender"value="m"> Male
-       <input type="radio" name="gender" value="f"> Female
-      </td>
-     </tr>
-  </div>
-    
-
-   <tr>
-    <td>Phone number :</td>
-    <td>
-     <input type="phone"name="phoneNo">
-    </td>
-   </tr>
-   <div class="submit">
-   <tr>
-    <td><input type="submit" value="Submit"name="submit"></td>
-   </tr>
-  </div>
- </form>
-</body>
-</html>
+			<a href="form.html"><button></a>
+            <table>
+              <thead>
+			  
+                <tr>
+                  <th>Patients ID </th>
+                  <th>First name </th>
+                  <th>Last name </th>
+                  <th>Age  </th>
+                  <th>Gender </th>
+                  <th>Phone No</th>
+                </tr>
+			
+					<?php
+						$conn = mysqli_connect("localhost","root","","hospital");
+						$sql = "SELECT * FROM patient";
+						$result = $conn -> query($sql);
+						
+						if($result->num_rows >0){
+							while($row = $result-> fetch_assoc()){
+								echo"<tr><td>".$row["patientId"]. "</td><td>".$row["firstName"]. "</td><td>".$row["lastName"]. "</td><td>".$row["age"]. "</td><td>".$row["gender"]. "</td><td>".$row["phoneNo"]. "</td></tr>";
+							}
+						}else{
+								echo"No results";
+							}
+							$conn->close();
+							
+					?>
+			</table>
+            </div>
+ </body>
+          
