@@ -85,14 +85,45 @@ body{
 .picon1{
     
 }
-.picon add{
-    display: none;
+
+.notification--profile .nav_right >ul{
+    display: flex;
+    align-items: center;
+}
+
+.notification--profile .nav_right ul li.nr_li{
+    margin-left: 25px;
+    cursor:pointer;
+}
+
+.notification--profile .nav_right ul li.nr_li:hover{
+    color: #5f5ce0 ;
+}
+
+.notification--profile .dd_menu{
+    position: absolute;
+    top: 47px;
+    right: 170px;
+    display: flex;
+    background-color: #fff;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
     
 }
 
-.add{
-    color: white;
+.notification--profile .dd_menu .dd_right{
+    padding: 15px 20px;
 }
+
+
+.ri-add-circle-line{
+    color: #fff;
+    font-size: 1.5rem;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
 
 .bell{
     color: white;
