@@ -2,39 +2,39 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+ <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-  
+  <title>Patients Form</title>
 </head>
 
 
 
 <body>
-
-  
-  <section class="header">
-    <div class="logo"></div>
-    <img src="images/hospital logo.jpg"height="60" alt=""><span><img src="images/NSW Health logo.jpg"height="65" alt=""></span>
-      <div class="search--notification--profile">
-        <div class="search">
-          <input type="text" placeholder="Search">
-          <button><i class="ri-search-line"></i></button>
-        </div> 
-        <div class="notification--profile">
-          <div class="picon add">
-            <i class="ri-add-circle-line"></i>
-        </div>  
-          
-        <div class="picon bell">
-            <i class="ri-notification-2-line"></i>
+    <section class="header">
+        <div class="logo"></div>
+        <img src="images/hospital logo.jpg" height="60" alt=""><span><img src="images/NSW Health logo.jpg" height="65" alt=""></span>
         </div>
-       
-      </div>
-      </div>
-  </section>
+        <div class="search--notification--profile">
+            <div class="search">
+                <input type="text" placeholder="Search">
+                <button><i class="ri-search-line"></i></button>
+            </div>
+            <div class="notification--profile">
+                <div class="picon add">
+                    <i class="ri-add-circle-line"></i>
+
+                </div>
+
+                <div class="picon bell">
+                    <i class="ri-notification-2-line"></i>
+                </div>
+
+            </div>
+        </div>
+    </section>
   <section class="main">
       <div class="sidebar">
         <u1 class="siderbar--item">
@@ -45,7 +45,7 @@
               </a>
             </li>
             <li>
-            <a href="patient.html">
+            <a href="patient.php">
               <span class="icon icon-2"><i class="ri-team-fill"></i></span>
               <span class="sidebar--item">Patients</span>
             </a>
@@ -88,66 +88,42 @@
               </li>
               
             </div>
-<html>
-  
-<head>
-  
-  <title>Patients Form</title>
-</head>
-<body>
 
-  <h1>Patients Form</h1>
-  
- <form>
+ <form action="insert.php"method="post" >
   
    <tr>
     <td>First Name :</td>
-    <td><input type="text"></td>
+    <td><input type="text" name="firstName"></td>
    </tr>
 
    <tr>
     <td>Last name :</td>
-    <td><input type="text"></td>
+    <td><input type="text"name="lastName"></td>
    </tr>
 
    
    
    <div><td>Age :</td>
-    <td><input type="Age"></td>
+    <td><input type="number"name="age"></td>
     <tr>
       <td>Gender :</td>
       <td>
-       <input type="radio" name="Gender"> Male
-       <input type="radio" name="Gender"> Female
+       <input type="radio" name="gender"value="m"> Male
+       <input type="radio" name="gender" value="f"> Female
       </td>
      </tr>
   </div>
     
-   
-
-   <div class="form2">
-    <label>Date of birthday</label>
-    <input type="date" >
-  </div>
-
-  <div class="email">
-    <label>Email</label>
-    <input type="number" placeholder="Email Address" >
-  </div>
 
    <tr>
-    <td>Phone no :</td>
+    <td>Phone number :</td>
     <td>
-     <select>
-      <option>04</option>
-
-     </select>
-     <input type="phone">
+     <input type="phone"name="phoneNo">
     </td>
    </tr>
    <div class="submit">
    <tr>
-    <td><input type="submit" value="Submit"></td>
+    <td><input type="submit" value="Submit"name="submit"></td>
    </tr>
   </div>
  </form>

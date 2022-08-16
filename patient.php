@@ -24,7 +24,7 @@
         </div> 
         <div class="notification--profile">
           <div class="picon add">
-            <i class="ri-add-circle-line"></i>
+           <i class="ri-add-circle-line"></i>
         </div>  
           
         <div class="picon bell">
@@ -40,7 +40,7 @@
             <li>
               <a href="index.html">
                 <span class="icon icon-1"><i class="ri-dashboard-line"></i></span>
-                <span class="sidebar--item">Dashborad</span>
+                <span class="sidebar--item">Dashboard</span>
               </a>
             </li>
             <li>
@@ -68,6 +68,12 @@
           <span class="sidebar--item">Studies</span>
         </a>
       </li>
+	   <li>
+        <a href="form.html">
+          <span class="icon icon-6"><i class="ri-book-mark-line"></i></span>
+          <span class="sidebar--item">Patient Form</span>
+        </a>
+      </li>
        
             </u1>
             <u1 class="sidebar--bottom-items"> 
@@ -87,11 +93,12 @@
               </li>
               
             </div>
-			<a href="form.html"><button></a>
+			
             <table>
               <thead>
 			  
                 <tr>
+				  
                   <th>Patients ID </th>
                   <th>First name </th>
                   <th>Last name </th>
