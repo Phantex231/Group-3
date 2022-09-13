@@ -1,0 +1,121 @@
+*{
+    margin:0;
+    padding:0;
+    
+}
+body{
+    /* border:1px solid black; */
+    /* margin:0 auto; */
+    background-color: #ebf2f2;
+   
+}
+.container{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:84px;
+    /* border: 1px solid black; */
+    position:relative;
+    top:60px;
+    background-color:#1F2B6C;
+
+}
+li{
+    margin:0;
+    padding:0;
+    list-style: none;
+    display: inline;
+    width:84px; height:84px;
+    font-size: 20px; 
+    margin: 0 auto;
+   }
+.hospitallogo{
+    position: relative;
+    left:105px;
+}
+.NSWlogo{
+    position: relative;
+    left:100px;
+}
+.addicon{
+    position: relative;
+    left:1110px;
+    bottom:20px;
+}
+.notificationicon{
+    width:40px;
+    height:40px;
+    position: relative;
+    display:inline-block;
+    left:1105px;
+    bottom:20px;
+    z-index:999;
+    border:1px solid black;
+}
+.notification{
+    display:none;
+    border: 1px solid black;
+    background-color:black;
+    width:200px;
+    height:200px;
+    position: absolute;
+    left:1350px;
+    top:80px;
+    z-index: 999;
+    
+    
+}
+.notificationimg:hover .notification{
+    display:block;
+}
+.searchicon{
+    position: absolute;
+    left:1443px;
+    top:24px;
+}
+.search{
+   
+    
+}
+#searchbox{
+    /* color:white; */
+    /* background-color:#6077f4; */
+    width:180px;
+    height: 35px; 
+    position: absolute;
+    top: 23px;
+    left:1485px;
+    border-radius: 20px;
+    /* background-color:white; */
+    text-align: center;
+    /* margin:0 auto; */
+    font-size:14px;
+    font-weight: bold;
+    
+    }
+    a{
+        color:white;
+        text-decoration: none;
+        font-size: 14px;
+        
+       }
+    .sidebar{
+        /* display:inline-block;
+        position: absolute; */
+        /* left:1500px; */
+        
+        width:80px;
+        height:45px;
+        position: absolute;
+        left:1700px;
+        top:23px;
+    }
+    .sidebar ul li{
+        margin:0;
+        padding:0;
+        display:block;
+    }
+    .settingicon{
+        position: relative;
+        bottom:64px;
+    }

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/patientsearchbar.css">
+</head>
+<body>
+    <div class="container">
+        <ul>
+            <li class="hospitallogo"><a href=""><img src="./image/hospital logo.jpg" alt="hospital logo" style="width:84px; height:84px;"></a></li>
+            <li class="NSWlogo"><a href=""><img src="./image/NSW Health logo.jpg" alt="NSW Health logo" style="width:160px; height:84px;"></a></li>
+            <li class="addicon"><a href=""><img src="./image/增加.png" alt="" style="width:40px; height:40px; background-color:white"></a></li>
+            <li class="notificationicon"><a href=""><img src="./image/提醒.png" alt="" style="width:40px; height:40px; background-color:white"></a></li>
+            <div class="notification"></div>
+            <li class="searchicon"><img src="./image/搜索.png" alt="" style="width:40px; height:40px; background-color:white "></li>
+        </ul>
+        <div class="search">
+            <!-- <form action="" id="form1"> -->
+            <!-- <li><img src="../image/搜索.png" alt="" style="width:20px; background-color:white "></li> -->
+            <input type="text" placeholder="search" name="search" id="searchbox" >
+            <!-- </form> -->
+        </div>
+        <div class="sidebar">
+            <ul>
+                <li class="quiticon"><a href="./index.html"><img src="./image/退出.png" alt="" style="width:20px; height:20px; background-color:white">Home</a></li>
+                <li class="settingicon"><a href=""><img src="./image/设置.png" alt="" style="width:20px; height:20px; background-color:white">Setting</a></li>
+            </ul>
+            
+        </div>
+    </div>
+    <div class="main">
+        <div class="photobox">
+            <img src="./image/hospital logo.jpg" alt="" id="photo">
+            <span>Patient Name:</span>
+        </div>
+        <div class="searchbox">
+        <img src="./image/搜索.png" alt="" id="searchicon2">
+        <input type="text" placeholder="Patient Search Bar"  name="Patient Search Bar" id="SearchBar" >
+        </div>
+        <div class="patienthistory">Patient history</br>
+            <input type="text" id="his1">
+            <input type="text" id="his2">
+        </div>
+        <div class="patientinformation">
+            Information</br>
+            <input type="text" id="information">
+        </div>
+        <div class="patienttreatment"> Treatment</br>
+            <input type="text" id="inf">
+            <input type="text" id="inf1">
+            <div class="button">
+                <button id="buttonid"><div class="buttonsize">Add Treatment</div></button>
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>
