@@ -1,0 +1,252 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>测试 - layui</title>
+    <link rel="stylesheet" href="layui/css/layui.css">
+    <style type="text/css">
+
+
+    </style>
+</head>
+<body style="background-color: rgb(237,242,245)">
+
+
+
+<ul class="layui-nav" lay-filter="" style="background-color:rgb(32,43,109)">
+
+    <li class="layui-nav-item"><img src="imgs/01.jpg" width="50px"></li>
+    <li class="layui-nav-item" style="margin-left: 15px"><img src="imgs/02.jpg" width="100px"></li>
+
+    <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-logout" style="font-size: 30px;"></i>&nbsp;&nbsp;Logout   </a>
+
+    <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-set" style="font-size: 30px;"></i>&nbsp;&nbsp;Setting   </a>
+
+    <li class="layui-nav-item " style="float: right;"><a href="#"><input type="text"  style="margin-top: 10px" name="title" required  lay-verify="required" placeholder="Search" autocomplete="off" class="layui-input">  </a>
+
+    </li>
+
+    <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-search" style="font-size: 30px;"></i>   </a>
+
+    </li>
+    <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-add-circle" style="font-size: 30px;"></i></a></li>
+    <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-notice" style="font-size: 30px;">
+
+    </i>   </a></li>
+
+    <li class="layui-nav-item " style="float: right;"><a href="demos/default.html">TimeTable
+
+        </i>   </a></li>
+    <!--<li class="layui-nav-item"><a href="">大数据</a></li>
+    <li class="layui-nav-item">
+        <a href="javascript:;">解决方案</a>
+        <dl class="layui-nav-child"> &lt;!&ndash; 二级菜单 &ndash;&gt;
+            <dd><a href="">移动模块</a></dd>
+            <dd><a href="">后台模版</a></dd>
+            <dd><a href="">电商平台</a></dd>
+        </dl>
+    </li>
+    <li class="layui-nav-item"><a href="">社区</a></li>-->
+</ul>
+
+<div style="font-size: 50px; text-align: center;margin-top:10px;">Enroll trial</div>
+
+<div style="background-color: white;height:50px;width:1200px;margin-left:360px">
+
+  <i class="layui-icon layui-icon-search" style="font-size: 30px;float:left;margin-top:5px"></i>
+
+    <input type="text"    class="layui-input" style="width:300px;margin-top:5px;float:left;">
+
+    <span  style="font-size: 30px; margin-left:45px; float:left">Edit</span><i class="layui-icon layui-icon-edit" style="font-size: 30px;float:left;margin-left:45px;margin-top:5px"></i>
+
+   <span  style="font-size: 30px; margin-left:45px; float:left"> |</span>
+
+
+    <span  style="font-size: 30px; margin-left:45px; float:left">Filter</span><i class="layui-icon layui-icon-home" style="font-size: 30px;float:left;margin-left:45px;margin-top:5px"></i>
+
+    <span  style="font-size: 30px; margin-left:45px; float:left"> |</span>
+
+    <i class="layui-icon layui-icon-left" style="font-size: 30px;float:left;margin-left:45px;margin-top:5px"></i>
+
+    <span  style="font-size: 30px; margin-left:45px; float:left"> 1</span>
+
+    <i class="layui-icon layui-icon-right" style="font-size: 30px;float:left;margin-left:45px;margin-top:5px"></i>
+
+    <span  style="font-size: 30px; margin-left:45px; float:left"> |</span>
+
+    <i class="layui-icon layui-icon-refresh" style="font-size: 30px;float:left;margin-left:45px;margin-top:5px"></i>
+
+
+</div>
+
+<div>
+    <div style="background-color: rgb(108,163,228);height:260px;width:500px;margin-left:360px;margin-top:30px;float: left;">
+        <div style="font-size: 20px;color:white;margin-left:50px;margin-top:15px">Example trial</div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-date" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px">11th.Apri</span>
+        </div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-time" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px">12:00-2:00</span>
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" style="background-color: white;margin-left:150px;width:150px">Enroll</button>
+        </div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-transfer" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px;float:left;">Room102</span>
+            <i class="layui-icon layui-icon-user" style="font-size: 20px;float:left;margin-left:120px"></i>
+            <span style="margin-left: 15px">5 Person enrolled</span>
+        </div>
+    </div>
+
+    <div style="background-color: rgb(108,163,228);height:260px;width:500px;margin-left:200px;margin-top:30px;float: left;">
+        <div style="font-size: 20px;color:white;margin-left:50px;margin-top:15px">Example trial</div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-date" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px">11th.Apri</span>
+        </div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-time" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px">12:00-2:00</span>
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" style="background-color: white;margin-left:150px;width:150px">Enroll</button>
+        </div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-transfer" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px;float:left;">Room102</span>
+            <i class="layui-icon layui-icon-user" style="font-size: 20px;float:left;margin-left:120px"></i>
+            <span style="margin-left: 15px">5 Person enrolled</span>
+        </div>
+
+    </div>
+
+    <div style="background-color: rgb(108,163,228);height:260px;width:500px;margin-left:360px;margin-top:30px;float: left;">
+        <div style="font-size: 20px;color:white;margin-left:50px;margin-top:15px">Example trial</div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-date" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px">11th.Apri</span>
+        </div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-time" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px">12:00-2:00</span>
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" style="background-color: white;margin-left:150px;width:150px">Enroll</button>
+        </div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-transfer" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px;float:left;">Room102</span>
+            <i class="layui-icon layui-icon-user" style="font-size: 20px;float:left;margin-left:120px"></i>
+            <span style="margin-left: 15px">5 Person enrolled</span>
+        </div>
+
+    </div>
+
+    <div style="background-color: rgb(108,163,228);height:260px;width:500px;margin-left:200px;margin-top:30px;float: left;">
+        <div style="font-size: 20px;color:white;margin-left:50px;margin-top:15px">Example trial</div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-date" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px">11th.Apri</span>
+        </div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-time" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px">12:00-2:00</span>
+            <button type="button" class="layui-btn layui-btn-radius layui-btn-primary" style="background-color: white;margin-left:150px;width:150px">Enroll</button>
+        </div>
+
+        <div style="font-size: 20px;color:white;margin-left:30px;margin-top:25px">
+            <i class="layui-icon layui-icon-transfer" style="font-size: 20px;float:left;"></i>
+            <span style="margin-left: 15px;float:left;">Room102</span>
+            <i class="layui-icon layui-icon-user" style="font-size: 20px;float:left;margin-left:120px"></i>
+            <span style="margin-left: 15px">5 Person enrolled</span>
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+<!-- body 末尾处引入 layui -->
+<script src="layui/layui.js"></script>
+<script>
+    layui.use(function(){
+        var layer = layui.layer
+            ,form = layui.form
+            ,laypage = layui.laypage
+            ,element = layui.element
+            ,laydate = layui.laydate
+            ,util = layui.util;
+
+        //欢迎信息
+        //layer.msg('Hello World');
+
+        //输出版本号
+        lay('#version').html(layui.v);
+
+        //日期
+        laydate.render({
+            elem: '#test2'
+            ,value: new Date()
+            ,isInitValue: true
+        });
+
+        //触发事件
+       /* util.on('test-active', {
+            'test-form': function(){
+                layer.open({
+                    type: 1
+                    ,resize: false
+                    ,shadeClose: true
+                    ,area: '350px'
+                    ,title: 'layer + form'
+                    ,content: ['<ul class="layui-form layui-form-pane" style="margin: 15px;">'
+                        ,'<li class="layui-form-item">'
+                        ,'<label class="layui-form-label">输入框</label>'
+                        ,'<div class="layui-input-block">'
+                        ,'<input class="layui-input" lay-verify="required" name="field1">'
+                        ,'</div>'
+                        ,'</li>'
+                        ,'<li class="layui-form-item">'
+                        ,'<label class="layui-form-label">选择框</label>'
+                        ,'<div class="layui-input-block">'
+                        ,'<select name="field2">'
+                        ,'<option value="A">A</option>'
+                        ,'<option value="B">B</option>'
+                        ,'<select>'
+                        ,'</div>'
+                        ,'</li>'
+                        ,'<li class="layui-form-item" style="text-align:center;">'
+                        ,'<button type="submit" lay-submit lay-filter="*" class="layui-btn">提交</button>'
+                        ,'</li>'
+                        ,'</ul>'].join('')
+                    ,success: function(layero, index){
+                        layero.find('.layui-layer-content').css('overflow', 'visible');
+
+                        form.render().on('submit(*)', function(data){
+                            var field = data.field;
+
+                            // 显示填写的表单
+                            layer.msg(util.escape(JSON.stringify(field)), {
+                                icon: 1
+                            });
+                            //layer.close(index); //关闭层
+                        });
+                    }
+                });
+            }
+        });*/
+    });
+</script>
+</body>
+</html>
