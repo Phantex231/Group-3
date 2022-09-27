@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Record</title>
+    <link rel="stylesheet" href="fullcalendar-2.4.0\layui\css\layui.css">
+    <style type="text/css">
+        .main{
+        /* border: 1px solid black; */
+        margin:0;
+        position:relative;
+        top:60px;
+    }
+    .main_title{
+        
+        height:150px;
+        font-size:30px;
+        font-weight:bold;
+        /* border:1px solid black; */
+        padding-left:770px;
+        line-height:150px;
+        position: relative;
+        bottom:30px;
+
+    }
+    #textbox{
+        width:300px;
+        height: 40px; 
+        /* position: absolute;
+        top: 25px;
+        left:1080px; */
+        border-radius: 30px;
+        border: none;
+    }
+    .main_part1{
+        width:300px;
+        /* border: 1px solid black; */
+        position: relative;
+        left:300px;
+    }
+    .main_part1 span{
+        display:inline-block;
+        font-weight: bold;
+    }
+    .FamilyName{
+        
+        
+    }
+    .GivenName{
+        position: relative;
+        top:100px;
+       
+    }
+    .PatientID{
+        position:relative;
+        top:200px;
+    }
+    
+    .main_part2 span{
+        display:inline-block;
+        font-weight: bold;
+    }
+
+    .main_part2{
+        
+        width:300px;
+        /* border: 1px solid black; */
+        position: relative;
+        left:1300px;
+        bottom:170px;
+        }
+        .DateofBirth{
+            position: relative;
+            top:100px;
+           
+        }
+        .PhoneNum{
+            position:relative;
+            top:200px;
+        }
+
+
+    .main_part3 span{
+        display:inline-block;
+        font-weight: bold;
+    }
+    .main_part3{
+        margin:0;
+        /* border: 1px solid black; */
+        position: absolute;
+        left:300px;
+        top:625px;
+    }
+
+
+    .Status{
+        position: relative;
+        left:200px;
+        
+
+    }
+    .DateofFirstTreatment{
+        position: relative;
+        left:390px;
+        /* bottom:120px; */
+    }
+
+
+    #patientphoto{
+        width: 400px;
+        height:500px;
+        position: absolute;
+        left:750px;
+        top:120px;
+    }
+    
+    .button{
+        width:400px;
+        height:30px;
+        position: relative;
+        left: 750px;
+        top:220px;
+    
+    }
+    #buttonid{
+        width:400px;
+        height:30px;
+        background-color: rgb(154, 172, 242);
+        border: none;
+        border-radius: 15px;
+
+
+    }
+    .buttonsize{
+        font-weight: bold;
+        
+    }
+
+
+
+    </style>
+</head>
+<body style="background-color: rgb(237,242,245)">
+
+
+
+<ul class="layui-nav" lay-filter="" style="background-color:rgb(32,43,109)">
+
+    <li class="layui-nav-item"><img src="./fullcalendar-2.4.0/imgs/01.jpg" width="50px"></li>
+    <li class="layui-nav-item" style="margin-left: 15px"><img src="./fullcalendar-2.4.0/imgs/02.jpg" width="100px"></li>
+
+    <li class="layui-nav-item " style="float: right;"><a href="../index.html"><i class="layui-icon layui-icon-logout" style="font-size: 30px;"></i>&nbsp;&nbsp;Home   </a>
+
+    <!-- <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-set" style="font-size: 30px;"></i>&nbsp;&nbsp;Setting   </a> -->
+
+    <li class="layui-nav-item " style="float: right;"><a href="#"><input type="text"  style="margin-top: 10px" name="title" required  lay-verify="required" placeholder="Search" autocomplete="off" class="layui-input">  </a>
+
+    </li>
+
+    <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-search" style="font-size: 30px;"></i>   </a>
+
+    </li>
+    <li class="layui-nav-item " style="float: right;"><a href="../patientstudycreate.html"><i class="layui-icon layui-icon-add-circle" style="font-size: 30px;"></i></a></li>
+    <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-notice" style="font-size: 30px;">
+
+    </i>   </a></li>
+
+    <li class="layui-nav-item " style="float: right;"><a href="demos/default.html">TimeTable
+
+        </i>   </a></li>
+   
+</ul>
+<div class="main">
+    <div class="main_title">
+        Create a Patient record
+    </div>
+    <div class="main_part1">
+        <span class="FamilyName">Family Name:<br/>
+            <form method="post" action="">
+            <input type="text" id="textbox">
+            </form>
+        </span>
+        <span class="GivenName">Given Name:<br/>
+            <form method="post" action="">
+                <input type="text" id="textbox">
+                </form>
+        </span>
+        <span class="PatientID">Patient ID:<br/>
+            <form method="post" action="">
+                <input type="text" id="textbox">
+                </form>
+        </span>
+    </div>
+    <img src="./fullcalendar-2.4.0/imgs/01.jpg" alt="photo upload" id="patientphoto">
+    <div class="main_part2">
+        <span class="BloodGroup">Blood Group:<br/>
+            <form method="post" action="">
+                <input type="text" id="textbox">
+                </form>
+        </span>
+        <span class="DateofBirth">Date of Birth:<br/>
+            <form method="post" action="">
+                <input type="text" id="textbox">
+                </form>
+        </span>
+        <span class="PhoneNum">Phone Number:<br/>
+            <form method="post" action="">
+                <input type="text" id="textbox">
+                </form>
+        </span>
+    </div>
+    <div class="main_part3">
+        <span class="Gender">Gender:<br/>
+            <form method="post" action="">
+                <input type="text" id="textbox">
+                </form>
+        </span>
+        <span class="Status">Staus:<br/>
+            <form method="post" action="">
+                <input type="text" id="textbox">
+                </form>
+        </span>
+        <span class="DateofFirstTreatment">Date of First Treatment:<br/>
+            <form method="post" action="">
+                <input type="text" id="textbox">
+                </form>
+        </span>
+    </div>
+    <div class="button">
+        <input type="submit" value="submit" name="submit" id="buttonid">
+    </div>
+    
+    
+</div>
+</div>
+
+
+</div>
+</body>
+</html>
