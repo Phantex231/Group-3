@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset='utf-8' />
+<link href='../fullcalendar.css' rel='stylesheet' />
+<link href='../fullcalendar.print.css' rel='stylesheet' media='print' />
+<script src='../lib/moment.min.js'></script>
+<script src='../lib/jquery.min.js'></script>
+<script src='../fullcalendar.min.js'></script>
+<script>
+
+	$(document).ready(function() {
+
+		$('#calendar').fullCalendar({
+			defaultDate: '2022-09-12',
+			editable: true,
+			eventLimit: true, // allow "more" link when too many events
+			events: [
+				{
+					title: '12:00-2：00pm',
+					start: '2022-09-12'
+				},
+                {
+                    title: 'Example trial',
+                    start: '2022-09-12'
+                },
+                {
+                    title: 'Room 102',
+                    start: '2022-09-12'
+                },
+			]
+		});
+		
+	});
+
+</script>
+<style>
+
+	body {
+		margin: 40px 10px;
+		padding: 0;
+		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
+		font-size: 14px;
+	}
+
+	#calendar {
+		max-width: 900px;
+		margin: 0 auto;
+	}
+
+</style>
+</head>
+<body>
+	<div style="margin-left: 400px;color:green"><a href="../index.html" style="color:green">Back Home</a></div>
+	<div id='calendar'></div>
+
+</body>
+</html>

@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Record</title>
+    <link rel="stylesheet" href="fullcalendar-2.4.0\layui\css\layui.css">
+    <style type="text/css">
+   .main{
+        /* border:1px solid black; */
+        position: absolute;
+        /* top:px; */
+    }
+    .photobox{
+        background-color: #4787B9;
+        width:450px;
+        height:350px;
+        border-radius:30px;
+        position: relative;
+        left:200px;
+        top:50px;
+    }
+    #photo{
+        width:220px;
+        height:260px;
+        position: relative;
+        left:120px;
+
+    }
+    .photobox span{
+        font-size:12px;
+        /* border:1px solid black; */
+        color:white;
+        position: relative;
+        right:40px;
+        top:30px;
+        
+    }
+    .searchbox{
+        /* border: 1px solid black; */
+        position: relative;
+        left:800px;
+        bottom:270px;
+
+
+    }
+    #searchicon2{
+        background-color:white;
+        width:30px;
+        height:30px;
+        position: relative;
+        bottom:11px;
+        /* border: 1px solid black; */
+    }
+    #SearchBar{
+        /* font-size:15px;
+        color:black;
+        font-weight:bold; */
+        font:20px black bold;
+        border:none;
+        text-align: center;
+        width:800px;
+        height:30px;
+        position: relative;
+        bottom:7px;
+        right:5px;
+        /* border: 1px solid black; */
+    }
+    .patienthistory{
+        font-size:30px;
+        
+        color:white;
+        text-align: center;
+        background-color: #4787B9;
+        width:900px;
+        height:280px;
+        border-radius:30px;
+        position: relative;
+        left:780px;
+        bottom:230px;
+    }
+    #his1{
+        width:750px;
+        height:60px;
+        position: relative;
+        top:20px;
+        border:none;
+    }
+    #his2{
+        width:750px;
+        height:60px;
+        position: relative;
+        top:40px;
+        border:none;
+    }
+    .patientinformation{
+        text-align: center;
+        color:white;
+        font-size:20px;
+        background-color: #4787B9;
+        width:450px;
+        height:350px;
+        border-radius:30px;
+        position: relative;
+        left:200px;
+        bottom:240px;
+        
+        
+    }
+    #information{
+        background-color: white;
+        width:250px;
+        height:260px;
+        border-radius:30px;
+        border:none;
+        position: relative;
+        top:20px;
+
+    }
+    .patienttreatment{
+        color:white;
+        font-size:20px;
+        text-align: center;
+        background-color: #4787B9;
+        width:900px;
+        height:300px;
+        border-radius:30px;
+        position: absolute;
+        left:780px;
+        bottom:250px;
+    }
+    #inf{
+        width:350px;
+        height:200px;
+        position: relative;
+        top:20px;
+        right:20px;
+        border:none;
+
+    }
+    #inf1{
+        width:350px;
+        height:200px;
+        position: relative;
+        top:20px;
+        left:20px;
+        border:none;
+
+    }
+    .button{
+        width:400px;
+        height:30px;
+        position: relative;
+        top:30px;
+        left:250px;
+    
+    }
+    #buttonid{
+        width:400px;
+        height:30px;
+        background-color: rgb(154, 172, 242);
+        border: none;
+        border-radius: 15px;
+
+
+    }
+    .buttonsize{
+        font-weight: bold;
+        
+    }
+    
+
+
+    </style>
+</head>
+<body style="background-color: rgb(237,242,245)">
+
+
+
+<ul class="layui-nav" lay-filter="" style="background-color:rgb(32,43,109)">
+
+    <li class="layui-nav-item"><img src="./fullcalendar-2.4.0/imgs/01.jpg" width="65px"></li>
+    <li class="layui-nav-item" style=""><img src="./fullcalendar-2.4.0/imgs/02.jpg" width="130px" height="66px;"></li>
+
+
+    <li class="layui-nav-item " style="float: right;"><a href="./index.html"><i class="layui-icon layui-icon-logout" style="font-size: 30px;"></i>&nbsp;&nbsp;Home   </a>
+
+    <!-- <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-set" style="font-size: 30px;"></i>&nbsp;&nbsp;Setting   </a> -->
+
+    <li class="layui-nav-item " style="float: right;"><a href="#"><input type="text"  style="margin-top: 10px" name="title" required  lay-verify="required" placeholder="Search" autocomplete="off" class="layui-input">  </a>
+
+    </li>
+
+    <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-search" style="font-size: 30px;"></i>   </a>
+
+    </li>
+    <!-- <li class="layui-nav-item " style="float: right;"><a href="../patientstudycreate.html"><i class="layui-icon layui-icon-add-circle" style="font-size: 30px;"></i></a></li>
+    <li class="layui-nav-item " style="float: right;"><a href="#"><i class="layui-icon layui-icon-notice" style="font-size: 30px;">
+
+    </i>   </a></li>
+
+    <li class="layui-nav-item " style="float: right;"><a href="demos/default.html">TimeTable
+
+        </i>   </a></li> -->
+   
+</ul>
+
+
+<div class="main">
+    <div class="photobox">
+        <img src="./fullcalendar-2.4.0/imgs/01.jpg" alt="" id="photo">
+        <span>Patient Name:</span>
+    </div>
+    <div class="searchbox">
+    <img src="./fullcalendar-2.4.0/imgs/搜索.png" alt="" id="searchicon2">
+    <form method="post" action="">
+        
+        
+    <input type="text" placeholder="Patient Search Bar"  name="Patient Search Bar" id="SearchBar" >
+
+    </form> 
+    </div>
+    <div class="patienthistory">Patient history</br>
+        <form method="post" action="">
+        <input type="text" id="his1">
+        <input type="text" id="his2">
+    </form>
+    </div>
+    <div class="patientinformation">
+        Information</br>
+        <form method="post" action="">
+        <input type="text" id="information">
+    </form>
+    </div>
+    <div class="patienttreatment"> Treatment</br>
+        <form method="post" action=""></form>
+        <input type="text" id="inf">
+        <input type="text" id="inf1">
+    </form>
+        <!-- <div class="button">
+            <button id="buttonid"><div class="buttonsize">Add Treatment</div></button>
+        </div> -->
+    </div>
+</div>
+</body>
+</html>
