@@ -1,14 +1,10 @@
-<?php   
- include "connection.php";  
- if (isset($_GET['id'])) {  
-      $id=$_GET['id'];  
-      $delete=mysqli_query($conn,"delete from patient where patientId='$id'");  
-      if ($delete) {  
-           header("location:patient.php");  
-           die();  
-      }  
- }  
- ?>  
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Patients data</title>
+    <link rel="stylesheet" href="fullcalendar-2.4.0\layui\css\layui.css">
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,39 +14,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Patient</title>
+    <title>Dashboard</title>
 </head>
 <style>
-.table{
+ .table{
 	float: right;
-	width: 78vw;
+	width: 83vw;
 	height:100%;
-}
-  .search--notification--profile{
-  width:400px;
-  /* border:1px solid black; */
-  position:relative;
-  left: 1200px;
 }
 </style>
 
 
-<section class="header">
+
+<body>
+  <section class="header">
     <div class="logo"></div>
         <img src="images/hospital logo.jpg"height="60" alt=""><span><img src="images/NSW Health logo.jpg"height="65" alt=""></span>
     </div>
-
+      
+ 
+        
         <!-- <div class="notification--profile">
           <div class="picon add">
-            <i class="ri-add-circle-line"></i>
-        </div>   -->
-          
+            <ul>
+              <li class="nr_li li_main">
+                <a href="" id="icon"><i class="ri-add-circle-line"></i></a>
+            </li> -->
+            
+           <!-- <div class="dd_menu" >
+              <div class="dd_right">
+            <ul>
+              <li>
+                <a href="./patientrecordcreate.html">New Patients </a>
+              </li>
+              <li>
+                <a href="./patienttreatment.html">Add treatment
+
+                </a>
+              </li>
+                
+                <li>
+                  <a href="./patientobservation.html">Create patient observations</a>
+                  
+                </li>
+              <li>
+                <a href="./patientstudycreate.html">Create a study</a>
+              </li>
+              <li>
+                <a href="./Rating.html">Feedback</a>
+              </li>
+            </ul>
+          </div> -->
+        <!-- </div> -->
+       
+        </div>  
+        
+             
+        
+           
         <!-- <div class="picon bell">
             <i class="ri-notification-2-line"></i>
-        </div> -->
-       
+        </div>
+        -->
       </div>
       </div>
+
+
   </section>
   <section class="main">
       <div class="sidebar">
@@ -67,7 +96,7 @@
               <span class="sidebar--item">Patients</span>
             </a>
           </li>
-		   <li>
+		  <li>
           <a href="./patientsearchbar.php">
             <span class="icon icon-3"><i class="ri-file-text-line"></i></span>
             <span class="sidebar--item">Search</span>
@@ -94,8 +123,8 @@
                   <span class="icon icon-6"><i class="ri-settings-3-line"></i></span>
                   <span class="sidebar--item">Settings</span>
                 </a>
-              </li> -->
-              
+              </li>
+               -->
             
               <li>
                 <a href="./logout.php">
@@ -104,7 +133,8 @@
                 </a>
               </li>
               
-            </div>
+                
+          </div>
 			<div class = "table">
             <table>
               <thead>
@@ -115,10 +145,12 @@
                   <th>Gender  </th>
                   <th>Age </th>
                   <th>Phone No</th>
-                </tr>	
+                </tr>
+				
 				<?php   
                 include "connection.php";  
-                $select=mysqli_query($conn,"select * from patient");  
+				$data =$_GET['data'];
+                $select=mysqli_query($conn,"select * from patient where patientId = $data");  
                 $num=mysqli_num_rows($select);  
                 if ($num>0) {  
                      while($result=mysqli_fetch_assoc($select)){  
@@ -130,17 +162,61 @@
                                     <td>".$result['gender']."</td>  
                                     <td>".$result['age']."</td>  
                                     <td>".$result['phoneNo']."</td>  
-                                    <td>  
-                                         <a href='?id=".$result['patientId']."' class='opt'>Delete</a>  
-                                         <a href='patientrecordcreate.php?id=".$result['patientId']."' class='opt'>Edit/Update</a>  
-                                    </td>  
-                               </tr>  
+                               </tr>  <tr>
+				<th>Observation</th>
+				<th>Treatment</th>
+				</tr>
+							   <tr>
+							   <td>".$result['observation']."</td>  
+                               <td>".$result['treatment']."</td>
+							   </tr>
                           ";  
                      }  
                 }  
            ?>    
             	</table>	
 					</div>
-                    </div>
-                  </head>
-          
+		  
+		  </div>
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  
+		  

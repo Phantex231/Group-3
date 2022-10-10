@@ -2,9 +2,9 @@
  include "connection.php";  
  if (isset($_GET['id'])) {  
       $id=$_GET['id'];  
-      $delete=mysqli_query($conn,"delete from patient where patientId='$id'");  
+      $delete=mysqli_query($conn,"delete from study where studyId='$id'");  
       if ($delete) {  
-           header("location:patient.php");  
+           header("location:study.php");  
            die();  
       }  
  }  
@@ -18,7 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <title>Patient</title>
+    <title>Study</title>
 </head>
 <style>
 .table{
@@ -98,7 +98,7 @@
               
             
               <li>
-                <a href="./logout.php">
+                <a href="./login.php">
                   <span class="icon icon-7"><i class="ri-logout-circle-r-line " ></i></span>
                   <span class="sidebar--item">Log out</span>
                 </a>
@@ -109,30 +109,28 @@
             <table>
               <thead>
                 <tr>
-                  <th>Patients ID </th>
-                  <th>First name </th>
-                  <th>Last name </th>
-                  <th>Gender  </th>
-                  <th>Age </th>
-                  <th>Phone No</th>
+                  <th>Course Name </th>
+                  <th>Type </th>
+                  <th>Start Date</th>
+                  <th>Notes  </th>
+
                 </tr>	
 				<?php   
                 include "connection.php";  
-                $select=mysqli_query($conn,"select * from patient");  
+                $select=mysqli_query($conn,"select * from study");  
                 $num=mysqli_num_rows($select);  
                 if ($num>0) {  
                      while($result=mysqli_fetch_assoc($select)){  
                           echo "  
                                <tr>  
-                                    <td>".$result['patientId']."</td>  
-                                    <td>".$result['firstName']."</td>  
-                                    <td>".$result['lastName']."</td>  
-                                    <td>".$result['gender']."</td>  
-                                    <td>".$result['age']."</td>  
-                                    <td>".$result['phoneNo']."</td>  
+                                    <td>".$result['studyId']."</td>  
+                                    <td>".$result['studyName']."</td>  
+                                    <td>".$result['sDate']."</td>  
+                                    <td>".$result['notes']."</td>  
+
                                     <td>  
-                                         <a href='?id=".$result['patientId']."' class='opt'>Delete</a>  
-                                         <a href='patientrecordcreate.php?id=".$result['patientId']."' class='opt'>Edit/Update</a>  
+                                         <a href='?id=".$result['studyId']."' class='opt'>Delete</a>  
+                                         <a href='patientstudycreate.php?id=".$result['studyId']."' class='opt'>Edit/Update</a>  
                                     </td>  
                                </tr>  
                           ";  

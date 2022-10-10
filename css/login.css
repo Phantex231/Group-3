@@ -78,6 +78,21 @@ form .txt_field{
 	.Nurse:hover{
 		text-decoration: underline;
 	}
+	/* .login{
+		width:40px;
+		length:20px;
+		
+
+	} */
+	.loginbutton{
+		width:100px;
+		length:100px;
+		background-color: rgb(55, 206, 248);
+		border:none;
+		border-radius: 15px;
+		position: relative;
+		left:100px;
+	}
 	input[type="submit"]{
 		width: 100%;
 		height: 50px;

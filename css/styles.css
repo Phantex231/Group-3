@@ -82,9 +82,6 @@ body{
     border-radius: 10px;
     
 }
-.picon1{
-    
-}
 
 .notification--profile .nav_right >ul{
     display: flex;
@@ -101,20 +98,33 @@ body{
 }
 
 .notification--profile .dd_menu{
+    
     position: absolute;
+    z-index: 999;
     top: 47px;
-    right: 170px;
+    right: 110px;
     display: flex;
     background-color: #fff;
     box-shadow: 0 0 3px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-    
+    border: 1px solid black;
+   
+   
 }
+#icon:checked  .dd_menu{
+    display: block;
+
+}
+
 
 .notification--profile .dd_menu .dd_right{
     padding: 15px 20px;
 }
 
+.notification--profile .dd_menu li{
+    margin-bottom: 10px;
+    color:#70d7a5
+}
 
 .ri-add-circle-line{
     color: #fff;
@@ -123,7 +133,9 @@ body{
     border-radius: 10px;
 }
 
-
+.notification--profile .nav_right ul li.li_main.active .dd_menu{
+    display: flex;
+}
 
 .bell{
     color: white;
@@ -307,11 +319,12 @@ td,th{
 }
 
 .title {
-    display: flex;
+    
     align-items: center;
     justify-content: space-between;
     margin-bottom: 10px;
     margin-top: 30px;
+    position: relative;
 }
 
 .section--title {
@@ -441,4 +454,8 @@ input[type=submit] {
     cursor: pointer;
     -webkit-border-radius: 5px;
     border-radius: 5px;
+}
+.patients form table{
+    width: 200%;
+    height: 800px;
 }

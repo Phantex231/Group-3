@@ -1,10 +1,9 @@
 <?php 
 if (isset($_POST['submit'])) {
-	
     if (isset($_POST['firstName']) && isset($_POST['lastName']) &&
         isset($_POST['age']) && isset($_POST['gender']) &&
         isset($_POST['phoneNo'])) {
-       
+        
         $firstName = $_POST['firstName'];
         $lastName = $_POST['lastName'];
         $age = $_POST['age'];
@@ -13,23 +12,30 @@ if (isset($_POST['submit'])) {
         $host = "localhost";
         $dbUsername = "root";
         $dbPassword = "";
-        $dbName = "hospital";
+        $dbName = "test";
         $conn = new mysqli($host, $dbUsername, $dbPassword, $dbName);
         if ($conn->connect_error) {
             die('Could not connect to the database.');
         }
         else {
-           $sql = "INSERT INTO patient VALUES (null,'$firstName','$lastName', '$age', '$gender', '$phoneNo')";
-
-			if ($conn->query($sql) === TRUE) {
-			echo "New record created successfully";
-			} 
-			else {
-			echo "Error: " . $sql . "<br>" . $conn->error;
-			}
-
-$conn->close();
-          
+            $Insert = "INSERT INTO paient(firstName, lastName, age, gender, phoneNo) values(?, ?, ?, ?, ?)";
+            $rnum = $stmt->num_rows;
+            if ($rnum == 0) {
+                $stmt->close();
+                $stmt = $conn->prepare($Insert);
+                $stmt->bind_param("ssssii",$firstName, $lastName, $age, $gender, $phoneNo);
+                if ($stmt->execute()) {
+                    echo "New record inserted sucessfully.";
+                }
+                else {
+                    echo $stmt->error;
+                }
+            }
+            else {
+                echo "Someone already registers using this email.";
+            }
+            $stmt->close();
+            $conn->close();
         }
     }
     else {
